@@ -106,7 +106,7 @@ if (!document.getElementById(cssId))
     link.id   = cssId;
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'http://scripts.leqqr.nl/widget/css/leqqr.css';
+    link.href = 'http://scripts.leqqr.nl/v1/widget/css/leqqr.css';
     link.media = 'all';
     head.appendChild(link);
 }
