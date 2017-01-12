@@ -1,0 +1,122 @@
+.leqqr-disable-scroll,
+.leqqr-disable-scroll body
+{
+  position:relative !important;
+  overflow: hidden !important;
+}
+
+.leqqr-disable-scroll.is_ios,
+.leqqr-disable-scroll.is_ios body{
+  height:100%;
+}
+
+button.leqqr {
+  background: green !important;
+}
+
+.leqqr-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  visibility: hidden;
+}
+
+.leqqr-popup .bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.leqqr-popup .box{
+  background: #222;
+  position: relative;
+  width:100%;
+  height:100%;
+  overflow-y: hidden;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+
+.leqqr-popup .inner {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 40px;
+}
+
+
+.leqqr-popup iframe{
+  position: absolute;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.leqqr-popup footer {
+  background: #222;
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  color:#fff;
+  font-size: 12px;
+  text-align: center;
+  height:40px;
+}
+
+.leqqr-popup footer .close{
+  position: absolute;
+  right:0;
+}
+
+.leqqr-popup footer a{
+  color:#aaa;
+  padding: 12px;
+  display: inline-block;
+}
+
+.leqqr-popup footer a:hover {
+  color:#aaa;
+  text-decoration: underline;
+}
+
+.is_ios .inner {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leqqr-popup.visible{
+  visibility: visible;
+}
+
+.leqqr-popup.visible .bg{
+  opacity: 1;
+}
+
+.leqqr-popup.visible .box{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 420px) {
+  .leqqr-popup .box{
+    position: absolute;
+    max-width: 380px;
+    max-height: 600px;
+    left: 50%;
+    margin-left: -190px;
+    top: 50%;
+    margin-top: -300px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.7);
+  }
+}
